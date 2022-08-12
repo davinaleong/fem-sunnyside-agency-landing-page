@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <script defer src="./scripts/main.js"></script>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -35,10 +36,9 @@
     </style>
   </head>
   <body class="text-neutral-900 bg-neutral-100">
+    <h1 class="visually-hidden">Sunnyside Agency Landing</h1>
     <main class="main-grid">
-      <h1 class="visually-hidden">Sunnyside Agency Landing</h1>
-
-      <div class="primary-header-container">
+      <div class="primary-header-container | bg-full" data-cell="header">
         <header class="primary-header">
           <a href="#" class="brand" aria-label="Logo Link">
             <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +51,7 @@
           <button
             id="primaryNavigationToggle"
             class="btn btn-icon"
+            data-primary-navigation-toggle
             aria-controls="#primaryNavigation"
             aria-expanded="false"
           >
@@ -59,16 +60,16 @@
           <nav id="primaryNav" class="primary-navigation">
             <ul class="nav-list" role="list">
               <li class="nav-item">
-                <a href="#" class="btn btn-link">About</a>
+                <a href="#" class="btn btn-header-link">About</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="btn btn-link">Services</a>
+                <a href="#" class="btn btn-header-link">Services</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="btn btn-link">Projects</a>
+                <a href="#" class="btn btn-header-link">Projects</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="btn btn-nav">Contact</a>
+                <a href="#" class="btn btn-primary">Contact</a>
               </li>
             </ul>
           </nav>
@@ -85,7 +86,102 @@
       </div>
       <!-- ./primary-header-container -->
 
-      <footer class="primary-footer">
+      <section class="section-grid" data-cell="transform">
+        <div class="section-content | text-center text-md-left">
+          <h2>Transform your brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <p>
+            <a href="#" class="btn btn-link">Learn More</a>
+          </p>
+        </div>
+        <div class="section-image | bg-full"></div>
+      </section>
+
+      <section class="section-grid" data-cell="stand-out">
+        <div class="section-image | bg-full"></div>
+        <div class="section-content | text-center text-md-left">
+          <h2>Stand out to the right audience</h2>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <p>
+            <a href="#" class="btn btn-link">Learn More</a>
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section-cell | bg-full text-center text-teal-900"
+        data-cell="graphic"
+      >
+        <h2>Graphic design</h2>
+
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients’ attention.
+        </p>
+      </section>
+
+      <section
+        class="section-cell | bg-full text-center text-blue-900"
+        data-cell="photography"
+      >
+        <h2>Photography</h2>
+
+        <p>
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
+      </section>
+
+      <section class="section-grid | text-center" data-cell="testimonials">
+        <h2 class="section-heading">Client Testimonials</h2>
+        <div class="section-cell">
+          <img src="./images/image-emily.jpg" />
+
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+
+          <p><strong>Emily R.</strong><br />Marketing Director</p>
+        </div>
+        <div class="section-cell">
+          <img src="./images/image-thomas.jpg" />
+
+          <p>
+            Sunnyside's enthusiasm coupled with their keen interest in our
+            brand's success made it a satisfying and enjoyable experience.
+          </p>
+
+          <p><strong>Thomas S.</strong><br />Chief Operating Officer</p>
+        </div>
+        <div class="section-cell">
+          <img src="./images/image-jennie.jpg" />
+
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+
+          <p><strong>Jennie F.</strong><br />Business Owner</p>
+        </div>
+      </section>
+
+      <section class="section-grid gallery-grid" data-cell="gallery">
+        <div class="gallery-cell bg-full" data-gallery-cell="milk"></div>
+        <div class="gallery-cell bg-full" data-gallery-cell="orange"></div>
+        <div class="gallery-cell bg-full" data-gallery-cell="cone"></div>
+        <div class="gallery-cell bg-full" data-gallery-cell="sugar"></div>
+      </section>
+
+      <footer class="primary-footer" data-cell="footer">
         <a href="#" class="brand">
           <svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -98,13 +194,13 @@
         <nav class="primary-footer-navigation">
           <ul class="nav-list" role="list">
             <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
+              <a href="#" class="btn btn-footer-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Services</a>
+              <a href="#" class="btn btn-footer-link">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Projects</a>
+              <a href="#" class="btn btn-footer-link">Projects</a>
             </li>
           </ul>
         </nav>
@@ -153,6 +249,16 @@
             </li>
           </ul>
         </nav>
+
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://www.frontendmentor.io/profile/davinaleong"
+            >Davina Leong</a
+          >.
+        </div>
       </footer>
     </main>
   </body>

@@ -2,6 +2,13 @@
     - Root
     - Content
       - Content - General Styling
+      - Content - Buttons
+      - Content - Nav List
+      - Content - Header
+      - Content - Footer
+      - Content - Sections
+      - Content - Testimonials
+      - Content - Gallery
     - Utility
       - Utility - Colours
       - Utility - Background Colours
@@ -22,8 +29,8 @@
 
   --clr-red-400: hsl(7, 99%, 70%);
   --clr-yellow-400: hsl(51, 100%, 49%);
-  --clr-teal-900: hsl(168, 34%, 41%);
-  --clr-blue-900: hsl(198, 62%, 26%);
+  --clr-teal-900: hsl(169, 42%, 24%);
+  --clr-blue-900: hsl(199, 58%, 28%);
 
   --ff-primary: "Barlow", Verdana, sans-serif;
   --ff-secondary: "Fraunces", Arial, sans-serif;
@@ -72,7 +79,7 @@ body {
   font-weight: var(--fw-regular);
 }
 
-.even-columns {
+/* .even-columns {
   display: grid;
   gap: var(--column-spacing);
 }
@@ -82,6 +89,12 @@ body {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+} */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 143vw repeat(3, 200vw) repeat(2, 100vw) 336vw 1vw 93vw;
 }
 
 .flow * + * {
@@ -100,6 +113,72 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.bg-full {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Content - Buttons **/
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  --padding: var(--size-200) var(--size-400);
+
+  border: none;
+  padding: var(--padding);
+  text-decoration: none;
+}
+
+.btn-icon {
+  background-color: transparent;
+}
+
+/** Content - Nav List **/
+.nav-list {
+  display: flex;
+}
+
+/** Content - Header **/
+.primary-header-container {
+  background-image: url(./../images/mobile/image-header.jpg);
+}
+
+.primary-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: var(--size-400);
+  padding: var(--size-400);
+  margin-top: var(--size-400);
+}
+
+.primary-header .nav-list {
+  justify-content: end;
+}
+
+[data-primary-navigation-toggle] {
+  display: none;
+  position: absolute;
+  top: var(--size-400);
+  right: var(--size-400);
+}
+
+@media (max-width: 47.9em) {
+  [data-primary-navigation-toggle] {
+    display: block;
+  }
+}
+
+/** Content - Footer **/
+/** Content - Sections **/
+/** Content - Testimonials **/
+/** Content - Gallery **/
 
 /** Content - End **/
 
