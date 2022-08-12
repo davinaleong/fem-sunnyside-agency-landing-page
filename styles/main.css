@@ -30,6 +30,8 @@
   --clr-red-400: hsl(7, 99%, 70%);
   --clr-yellow-400: hsl(51, 100%, 49%);
   --clr-teal-900: hsl(169, 42%, 24%);
+
+  --clr-blue-200: hsl(201, 100%, 72%);
   --clr-blue-900: hsl(199, 58%, 28%);
 
   --ff-primary: "Barlow", Verdana, sans-serif;
@@ -133,15 +135,52 @@ button {
   border: none;
   padding: var(--padding);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-icon {
   background-color: transparent;
 }
 
+.btn-header-link {
+  color: var(--clr-neutral-100);
+}
+
+.btn-header-link:where(:hover, :focus, :focus-within) {
+  color: var(--clr-neutral-100);
+}
+
+.btn-header {
+  --padding: var(--size-400) var(--size-600);
+
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-neutral-100);
+  border-radius: 100vmax;
+}
+
+.btn-header:where(:hover, :focus, :focus-within) {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-blue-200);
+}
+
+@media (max-width: 47.99em) {
+  .btn-header {
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-yellow-400);
+  }
+
+  .btn-header:where(:hover, :focus, :focus-within) {
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-yellow-400);
+  }
+}
+
 /** Content - Nav List **/
 .nav-list {
   display: flex;
+  gap: var(--size-400);
 }
 
 /** Content - Header **/
@@ -155,7 +194,11 @@ button {
   grid-template-columns: max-content auto;
   gap: var(--size-400);
   padding: var(--size-400);
-  margin-top: var(--size-400);
+  margin-top: var(--size-600);
+}
+
+.primary-header .brand svg {
+  fill: var(--clr-neutral-100);
 }
 
 .primary-header .nav-list {
@@ -169,7 +212,7 @@ button {
   right: var(--size-400);
 }
 
-@media (max-width: 47.9em) {
+@media (max-width: 47.99em) {
   [data-primary-navigation-toggle] {
     display: block;
   }
@@ -205,6 +248,9 @@ button {
 .text-teal-900 {
   color: var(--clr-teal-900);
 }
+.text-blue-200 {
+  color: var(--clr-blue-200);
+}
 .text-blue-900 {
   color: var(--clr-blue-900);
 }
@@ -233,6 +279,9 @@ button {
 }
 .bg-teal-900 {
   background-color: var(--clr-teal-900);
+}
+.bg-blue-200 {
+  background-color: var(--clr-blue-200);
 }
 .bg-blue-900 {
   background-color: var(--clr-blue-900);
