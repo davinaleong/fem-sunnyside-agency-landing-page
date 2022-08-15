@@ -514,8 +514,7 @@ button {
 
 [data-cell="testimonials"].section-grid {
   padding: var(--size-1000) var(--size-400);
-  grid-template-rows: 1fr 2fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content repeat(3, 1fr);
 }
 
 @media (min-width: 62em) {
@@ -525,7 +524,7 @@ button {
   }
 
   [data-cell="testimonials"].section-grid {
-    grid-template-rows: 0.5fr 2fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--size-400);
   }
