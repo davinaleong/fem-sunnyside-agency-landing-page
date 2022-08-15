@@ -93,22 +93,6 @@ body {
   font-weight: var(--fw-regular);
 }
 
-svg path {
-  fill: var(--clr-neutral-100);
-}
-
-/* .even-columns {
-  display: grid;
-  gap: var(--column-spacing);
-}
-
-@media (min-width: 48em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-} */
-
 .main-grid {
   display: grid;
   grid-template-columns: 100vw;
@@ -291,9 +275,10 @@ button {
 
 /** Content - Footer **/
 .primary-footer {
-  padding: var(--size-600) var(--size-800);
+  padding: var(--size-600) var(--size-400);
   background-color: var(--clr-teal-200);
   display: grid;
+  grid-template-columns: auto;
   grid-template-rows: 0.75fr 0.5fr 1fr max-content;
   align-items: center;
   justify-items: center;
@@ -313,7 +298,7 @@ button {
 }
 
 .primary-footer-navigation .nav-list {
-  max-width: 25em;
+  /* max-width: 25em; */
   margin-inline: auto;
   justify-content: space-between;
 }
@@ -359,6 +344,7 @@ button {
 
   display: grid;
   grid-template-rows: 42% 58%;
+  grid-template-columns: 100%;
   justify-items: center;
   align-items: center;
 }
@@ -374,6 +360,14 @@ button {
 
 .section-content p {
   max-width: 30ch;
+}
+
+.section-cell {
+  padding: var(--size-400);
+  display: grid;
+  align-items: end;
+  width: 100%;
+  height: 100%;
 }
 
 [data-cell="transform"] .section-image {
@@ -394,18 +388,12 @@ button {
 }
 
 [data-cell="stand-out"] .btn-link {
-  --color: var(--clr-yellow-400);
-  --hover-color: var(--clr-yellow-300);
+  --color: var(--clr-red-400);
+  --hover-color: var(--clr-red-300);
 }
 
 [data-cell="stand-out"] p {
   margin-inline: auto;
-}
-
-.section-cell {
-  padding: var(--size-400);
-  display: grid;
-  align-items: end;
 }
 
 [data-cell="graphic"] {
@@ -422,6 +410,39 @@ button {
 
 [data-cell="photography"] p {
   margin-inline: auto;
+}
+
+[data-cell="testimonials"].section-grid {
+  padding: var(--size-800) var(--size-400);
+  grid-template-rows: max-content repeat(3, 1fr);
+}
+
+.image-testimonial {
+  --size: 4em;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+}
+
+[data-cell="gallery"].section-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+[data-gallery-cell="milk"] {
+  background-image: url(./../images/mobile/image-gallery-milkbottles.jpg);
+}
+
+[data-gallery-cell="orange"] {
+  background-image: url(./../images/mobile/image-gallery-orange.jpg);
+}
+
+[data-gallery-cell="cone"] {
+  background-image: url(./../images/mobile/image-gallery-cone.jpg);
+}
+
+[data-gallery-cell="sugar"] {
+  background-image: url(./../images/mobile/image-gallery-sugar-cubes.jpg);
 }
 
 /** Content - Testimonials **/
