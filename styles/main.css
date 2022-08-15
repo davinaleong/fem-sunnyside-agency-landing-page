@@ -17,6 +17,8 @@
       - Utility - Font Sizes
       - Utility - Spacing
       - Utility - Visibility
+      - Utility - Text Transform
+      - Utility - Letter Spacing
 */
 
 /** Root **/
@@ -34,7 +36,8 @@
   --clr-teal-800: hsl(166, 45%, 32%);
   --clr-teal-900: hsl(169, 42%, 24%);
 
-  --clr-blue-200: hsl(201, 100%, 72%);
+  --clr-blue-100: hsl(201, 100%, 72%);
+  --clr-blue-200: hsl(200, 100%, 62%);
   --clr-blue-900: hsl(199, 58%, 28%);
 
   --ff-primary: "Barlow", Verdana, sans-serif;
@@ -98,7 +101,7 @@ body {
 
 .main-grid {
   display: grid;
-  width: 100%;
+  grid-template-columns: 100vw;
   grid-template-rows: max-content 143vw repeat(2, 200vw) repeat(2, 100vw) 336vw 100vw 93vw;
 }
 
@@ -159,13 +162,30 @@ button {
   font-family: var(--ff-heading);
   text-transform: uppercase;
   color: var(--clr-neutral-900);
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-yellow-400);
   border-radius: 100vmax;
 }
 
 .btn-header:where(:hover, :focus, :focus-within) {
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-blue-200);
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-yellow-400);
+}
+
+@media (min-width: 48em) {
+  .btn-header {
+    --padding: var(--size-400) var(--size-600);
+
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-100);
+    border-radius: 100vmax;
+  }
+
+  .btn-header:where(:hover, :focus, :focus-within) {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-blue-100);
+  }
 }
 
 .btn-footer-link {
@@ -175,18 +195,6 @@ button {
 
 .btn-footer-link:where(:hover, :focus, :focus-within) {
   color: var(--clr-neutral-100);
-}
-
-@media (max-width: 47.99em) {
-  .btn-header {
-    color: var(--clr-neutral-900);
-    background-color: var(--clr-yellow-400);
-  }
-
-  .btn-header:where(:hover, :focus, :focus-within) {
-    color: var(--clr-neutral-900);
-    background-color: var(--clr-yellow-400);
-  }
 }
 
 /** Content - Nav List **/
@@ -216,13 +224,21 @@ button {
 [data-primary-navigation-toggle] {
   display: none;
   position: absolute;
-  top: var(--size-400);
-  right: var(--size-400);
+  top: var(--size-500);
+  right: 0;
 }
 
 @media (max-width: 47.99em) {
+  .primary-header {
+    grid-template-columns: auto;
+  }
+
   [data-primary-navigation-toggle] {
     display: block;
+  }
+
+  .primary-navigation {
+    display: none;
   }
 }
 
@@ -250,6 +266,8 @@ button {
 }
 
 .primary-footer-navigation .nav-list {
+  max-width: 25em;
+  margin-inline: auto;
   justify-content: space-between;
 }
 
@@ -274,6 +292,20 @@ button {
   fill: var(--clr-neutral-100);
 }
 /** Content - Sections **/
+.landing-section {
+  padding: var(--size-400);
+  background-image: url(./../images/mobile/image-header.jpg);
+  display: grid;
+}
+
+.landing-section.bg-full {
+  background-position: bottom center;
+}
+
+.landing-heading {
+  align-self: center;
+}
+
 /** Content - Testimonials **/
 /** Content - Gallery **/
 
@@ -1583,6 +1615,44 @@ button {
   .display-desktop {
     display: block;
   }
+}
+
+/** Utility - Text Transform **/
+.tt-lowercase {
+  text-transform: lowercase;
+}
+
+.tt-uppercase {
+  text-transform: uppercase;
+}
+
+.tt-capitalize {
+  text-transform: capitalize;
+}
+
+/** Utility - Letter Spacing **/
+.ls-normal {
+  letter-spacing: normal;
+}
+
+.ls-100 {
+  letter-spacing: 0;
+}
+
+.ls-200 {
+  letter-spacing: 0.03em;
+}
+
+.ls-300 {
+  letter-spacing: 0.05em;
+}
+
+.ls-400 {
+  letter-spacing: 0.08em;
+}
+
+.ls-500 {
+  letter-spacing: 0.1em;
 }
 
 /** Utility - End **/
