@@ -112,7 +112,7 @@ svg path {
 .main-grid {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: max-content 143vw repeat(2, 200vw) repeat(2, 100vw) 336vw 100vw 93vw;
+  grid-template-rows: max-content 143vw repeat(2, 200vw) repeat(2, 160vw) 336vw 100vw 93vw;
 }
 
 .flow * + * {
@@ -399,6 +399,28 @@ button {
 }
 
 [data-cell="stand-out"] p {
+  margin-inline: auto;
+}
+
+.section-cell {
+  padding: var(--size-400);
+  display: grid;
+  align-items: end;
+}
+
+[data-cell="graphic"] {
+  background-image: url(./../images/mobile/image-graphic-design.jpg);
+}
+
+[data-cell="graphic"] p {
+  margin-inline: auto;
+}
+
+[data-cell="photography"] {
+  background-image: url(./../images/mobile/image-photography.jpg);
+}
+
+[data-cell="photography"] p {
   margin-inline: auto;
 }
 
