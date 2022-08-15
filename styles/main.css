@@ -29,6 +29,9 @@
 
   --clr-red-400: hsl(7, 99%, 70%);
   --clr-yellow-400: hsl(51, 100%, 49%);
+
+  --clr-teal-200: hsl(167, 44%, 70%);
+  --clr-teal-800: hsl(166, 45%, 32%);
   --clr-teal-900: hsl(169, 42%, 24%);
 
   --clr-blue-200: hsl(201, 100%, 72%);
@@ -95,8 +98,8 @@ body {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: max-content 143vw repeat(3, 200vw) repeat(2, 100vw) 336vw 1vw 93vw;
+  width: 100%;
+  grid-template-rows: max-content 143vw repeat(2, 200vw) repeat(2, 100vw) 336vw 100vw 93vw;
 }
 
 .flow * + * {
@@ -165,6 +168,15 @@ button {
   background-color: var(--clr-blue-200);
 }
 
+.btn-footer-link {
+  font-size: var(--fs-500);
+  color: var(--clr-teal-800);
+}
+
+.btn-footer-link:where(:hover, :focus, :focus-within) {
+  color: var(--clr-neutral-100);
+}
+
 @media (max-width: 47.99em) {
   .btn-header {
     color: var(--clr-neutral-900);
@@ -215,6 +227,52 @@ button {
 }
 
 /** Content - Footer **/
+.primary-footer {
+  padding: var(--size-600) var(--size-800);
+  background-color: var(--clr-teal-200);
+  display: grid;
+  grid-template-rows: 0.75fr 0.5fr 1fr max-content;
+  align-items: center;
+  justify-items: center;
+}
+
+.primary-footer > * {
+  width: 100%;
+}
+
+.primary-footer .brand svg {
+  fill: var(--clr-teal-800);
+  margin-inline: auto;
+}
+
+.primary-footer .brand:where(:hover, :focus) svg {
+  fill: var(--clr-neutral-100);
+}
+
+.primary-footer-navigation .nav-list {
+  justify-content: space-between;
+}
+
+.social-navigation .nav-list {
+  justify-content: center;
+  gap: var(--size-500);
+}
+
+.social-link {
+  color: var(--clr-teal-800);
+}
+
+.social-link svg {
+  fill: var(--clr-teal-800);
+}
+
+.social-link:where(:hover, :focus) {
+  color: var(--clr-neutral-100);
+}
+
+.social-link:where(:hover, :focus) svg {
+  fill: var(--clr-neutral-100);
+}
 /** Content - Sections **/
 /** Content - Testimonials **/
 /** Content - Gallery **/

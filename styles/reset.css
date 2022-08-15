@@ -58,6 +58,10 @@ svg {
   display: block;
 }
 
+svg path {
+  width: 100%;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
