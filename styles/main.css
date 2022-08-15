@@ -130,15 +130,10 @@ body {
 }
 
 /** Content - Buttons **/
-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .btn {
   --padding: var(--size-200) var(--size-400);
 
+  display: inline-flex;
   border: none;
   padding: var(--padding);
   text-decoration: none;
@@ -150,11 +145,12 @@ button {
 }
 
 .btn-header-link {
-  color: var(--clr-neutral-100);
+  font-size: var(--size-500);
+  color: var(--clr-neutral-400);
 }
 
 .btn-header-link:where(:hover, :focus, :focus-within) {
-  color: var(--clr-neutral-100);
+  color: var(--clr-neutral-400);
 }
 
 .btn-header {
@@ -173,6 +169,15 @@ button {
 }
 
 @media (min-width: 62em) {
+  .btn-header-link {
+    font-size: var(--size-400);
+    color: var(--clr-neutral-100);
+  }
+
+  .btn-header-link:where(:hover, :focus, :focus-within) {
+    color: var(--clr-neutral-100);
+  }
+
   .btn-header {
     --padding: var(--size-400) var(--size-600);
 
@@ -251,12 +256,15 @@ button {
   background-color: var(--clr-blue-200);
 }
 
-.primary-header .brand svg {
-  fill: var(--clr-neutral-100);
+@media (min-width: 62em) {
+  [data-cell="header"] {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
 }
 
-.primary-header .nav-list {
-  justify-content: end;
+.primary-header .brand svg {
+  fill: var(--clr-neutral-100);
 }
 
 [data-primary-navigation-toggle] {
@@ -266,11 +274,13 @@ button {
   right: 0;
 }
 
-@media (min-width: 62em) {
-  [data-cell="header"] {
-    grid-row: 1;
-    grid-column: 1 / span 2;
-  }
+.primary-header .primary-navigation {
+  display: none;
+  position: relative;
+}
+
+.primary-header .nav-list {
+  justify-content: end;
 }
 
 @media (max-width: 61.99em) {
@@ -282,8 +292,34 @@ button {
     display: block;
   }
 
-  .primary-navigation {
-    display: none;
+  .primary-header[data-open] .primary-navigation {
+    display: block;
+  }
+
+  .primary-header[data-open] .nav-list {
+    --width: 23.438em;
+
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    width: calc(var(--width) - 2em);
+    padding: var(--size-500);
+    background-color: var(--clr-neutral-100);
+  }
+
+  .primary-header[data-open] .nav-list::before {
+    content: "";
+    position: absolute;
+    top: -2em;
+    right: 0;
+    width: 2em;
+    height: 2em;
+    border-top: 1em solid var(--clr-blue-200);
+    border-bottom: 1em solid var(--clr-neutral-100);
+    border-left: 1em solid var(--clr-blue-200);
+    border-right: 1em solid var(--clr-neutral-100);
   }
 }
 
