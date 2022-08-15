@@ -459,6 +459,7 @@ body {
 
 [data-cell="graphic"] {
   background-image: url(./../images/mobile/image-graphic-design.jpg);
+  padding-bottom: var(--size-700);
 }
 
 [data-cell="graphic"] p {
@@ -467,6 +468,7 @@ body {
 
 [data-cell="photography"] {
   background-image: url(./../images/mobile/image-photography.jpg);
+  padding-bottom: var(--size-800);
 }
 
 [data-cell="photography"] p {
@@ -1968,7 +1970,7 @@ body {
 }
 
 .ls-600 {
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
 }
 
 /** Utility - Line Heights **/
