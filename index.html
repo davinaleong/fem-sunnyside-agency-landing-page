@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <title>Frontend Mentor | Sunnyside agency hero page</title>
 
     <link
       rel="icon"
@@ -74,25 +74,25 @@
         </nav>
       </header>
 
-      <section
-        class="landing-section | text-center bg-full"
-        data-cell="landing"
-      >
+      <section class="hero-section | text-center bg-full" data-cell="hero">
         <h2
-          class="landing-heading | text-neutral-100 ff-heading fs-800 tt-uppercase ls-400"
+          class="hero-heading | text-neutral-100 ff-heading fs-800 tt-uppercase ls-400"
         >
           We are creatives
         </h2>
         <img
           src="./images/icon-arrow-down.svg"
           alt="Down Arrow"
-          class="landing-icon | mx-auto"
+          class="hero-icon | mx-auto"
         />
       </section>
 
       <section class="section-grid |" data-cell="transform">
         <div class="section-image | bg-full"></div>
-        <div class="section-content | flow text-center text-md-left">
+        <div
+          class="section-content | flow text-center text-md-left"
+          style="--flow-spacer: var(--size-600)"
+        >
           <h2 class="ff-heading fs-700 lh-200">Transform your brand</h2>
           <p class="text-neutral-400">
             We are a full-service creative agency specializing in helping brands
@@ -107,7 +107,10 @@
 
       <section class="section-grid" data-cell="stand-out">
         <div class="section-image | bg-full"></div>
-        <div class="section-content | flow text-center text-md-left">
+        <div
+          class="section-content | flow text-center text-md-left"
+          style="--flow-spacer: var(--size-600)"
+        >
           <h2 class="ff-heading fs-700 lh-200">
             Stand out to the right audience
           </h2>
@@ -152,7 +155,9 @@
       </section>
 
       <section class="section-grid | text-center" data-cell="testimonials">
-        <h2 class="ff-heading text-neutral-300 tt-uppercase ls-500">
+        <h2
+          class="testimonial-heading | ff-heading text-neutral-300 tt-uppercase ls-600"
+        >
           Client Testimonials
         </h2>
         <div class="section-cell | flow">
@@ -161,12 +166,12 @@
             class="image-testimonial | mx-auto"
           />
 
-          <p class="text-neutral-800">
+          <p class="testimonial-text | text-neutral-800">
             We put our trust in Sunnyside and they delivered, making sure our
             needs were met and deadlines were always hit.
           </p>
 
-          <p class="text-neutral-400">
+          <p class="testimonial-text | text-neutral-400">
             <strong class="text-neutral-900 ff-heading fs-500">Emily R.</strong
             ><br />Marketing Director
           </p>
@@ -177,12 +182,12 @@
             class="image-testimonial | mx-auto"
           />
 
-          <p class="text-neutral-800">
+          <p class="testimonial-text | text-neutral-800">
             Sunnyside's enthusiasm coupled with their keen interest in our
             brand's success made it a satisfying and enjoyable experience.
           </p>
 
-          <p class="text-neutral-400">
+          <p class="testimonial-text | text-neutral-400">
             <strong class="text-neutral-900 ff-heading fs-500">Thomas S.</strong
             ><br />Chief Operating Officer
           </p>
@@ -193,12 +198,12 @@
             class="image-testimonial | mx-auto"
           />
 
-          <p class="text-neutral-800">
+          <p class="testimonial-text | text-neutral-800">
             Incredible end result! Our sales increased over 400% when we worked
             with Sunnyside. Highly recommended!
           </p>
 
-          <p class="text-neutral-400">
+          <p class="testimonial-text | text-neutral-400">
             <strong class="text-neutral-900 ff-heading fs-500">Jennie F.</strong
             ><br />Business Owner
           </p>
