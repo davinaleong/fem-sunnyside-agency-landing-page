@@ -96,7 +96,7 @@ body {
 .main-grid {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 143vw repeat(3, 200vw) repeat(2, 100vw) 336vw 1vw 93vw;
+  grid-template-rows: max-content 143vw repeat(3, 200vw) repeat(2, 100vw) 336vw 1vw 93vw;
 }
 
 .flow * + * {
@@ -184,17 +184,13 @@ button {
 }
 
 /** Content - Header **/
-.primary-header-container {
-  background-image: url(./../images/mobile/image-header.jpg);
-}
-
 .primary-header {
   position: relative;
   display: grid;
   grid-template-columns: max-content auto;
   gap: var(--size-400);
-  padding: var(--size-400);
-  margin-top: var(--size-600);
+  padding: var(--size-600) var(--size-400);
+  background-color: var(--clr-blue-200);
 }
 
 .primary-header .brand svg {
