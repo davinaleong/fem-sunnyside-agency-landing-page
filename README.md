@@ -4,7 +4,7 @@ Another simple challenge from Frontend Mentor.
 
 The challenge can be found [here](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef).
 
-Demo page coming soon!
+Demo page can be found [here](https://davinaleong.github.io/fem-sunnyside-agency-landing-page/)!
 
 ## Getting Started
 
