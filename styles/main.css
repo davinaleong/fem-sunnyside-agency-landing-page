@@ -243,6 +243,7 @@ body {
 /** Content - Nav List **/
 .nav-list {
   display: flex;
+  align-items: center;
   gap: var(--size-400);
 }
 
@@ -275,7 +276,6 @@ body {
 }
 
 .primary-header .primary-navigation {
-  display: none;
   position: relative;
 }
 
@@ -290,6 +290,10 @@ body {
 
   [data-primary-navigation-toggle] {
     display: block;
+  }
+
+  .primary-header .primary-navigation {
+    display: none;
   }
 
   .primary-header[data-open] .primary-navigation {
